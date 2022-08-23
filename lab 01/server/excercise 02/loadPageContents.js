@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-const webPageContent = fs.readFileSync('../public/index.html',"utf-8")
+const homeContent = fs.readFileSync('../public/index.html',"utf-8")
 
 
-const loadPageContents = {
-    'webPageData': webPageContent
+const loadContents = {
+    'homeData': homeContent
 }
 
-module.exports = {loadPageContents}
+module.exports = {loadContents}
