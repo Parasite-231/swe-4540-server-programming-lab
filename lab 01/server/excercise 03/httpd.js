@@ -5,16 +5,22 @@ require("dotenv").config({ path: "../dependency/.env" });
 
 
 const server = http.createServer((req,res)=>{
+    console.log("req method : " + req.method + " " + "req url:"+ req.url + " " + req.httpVersion);
 
-    if(req.url === '/index.html'  ){
+
+    if(req.url === '/'  ){
 
         res.writeHead(200, {"Content-type":"text/html"})
         res.write(loadWebPage.loadPageContents.formPageData)
         res.end();
 
    }
-    else if (req.url === '/' && req.method === 'POST') {
+    else if (req.url === '/login' && req.method === 'GET') {
 
+        // console.log(req.data)
+        //req.data will show undefined because data are coming in streaming way data are not coming altogether
+        //thats why we have to listen as data are coming by chunk 
+        //use on to get data
         req.on('data',(chunkOfData)=>{
             console.log("Your Submitted Data : "+ chunkOfData.toString());
         })
@@ -26,7 +32,7 @@ const server = http.createServer((req,res)=>{
     else {
         // res.statusCode(400).send('Wrong url');
         res.writeHead(404, {"Content-type":"text/html"})
-        res.write(loadWebPage.loadPageContents.errorPageData)
+        res.write("CANNOT GET URL : "+req.url)
         res.end();
     }
 

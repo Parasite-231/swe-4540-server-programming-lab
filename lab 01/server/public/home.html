@@ -8,7 +8,6 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="shortcut icon" href="#" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
@@ -18,7 +17,21 @@
     <div class="container">
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-4">My first web server</h1>
+          <h1 class="display-4">My first web application</h1>
+
+          <p>Request data</p>
+
+          <ul>
+            <li>Method : {{method}}</li>
+            <li>Path : {{path}}</li>
+            <li>Query string : {{query}}</li>
+          </ul>
+
+          <p>Parsed queries</p>
+
+          <ul>
+            {{queries}}
+          </ul>
         </div>
       </div>
     </div>
