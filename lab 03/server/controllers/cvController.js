@@ -1,6 +1,7 @@
 const fs = require("fs");
 
 const getCV = (req, res) => {
+  //education section read
   educations = fs.readFileSync("models/educationData", {
     encoding: "utf-8",
   });
@@ -12,6 +13,17 @@ const getCV = (req, res) => {
     edus.push(educations[key]);
   }
 
+  //skill section read
+  // skills = fs.readFileSync("models/skillData", { encoding: "utf-8" });
+
+  // skills = JSON.parse(String(skills));
+
+  // skillContainer = [];
+
+  // for (let key in skills) {
+  //   skillContainer.push(skills[key]);
+  // }
+
   skills = fs.readFileSync("models/skillData", { encoding: "utf-8" });
 
   skills = JSON.parse(String(skills));
@@ -22,16 +34,7 @@ const getCV = (req, res) => {
     skillContainer.push(skills[key]);
   }
 
-  skills = fs.readFileSync("models/skillData", { encoding: "utf-8" });
-
-  skills = JSON.parse(String(skills));
-
-  skillContainer = [];
-
-  for (let key in skills) {
-    skillContainer.push(skills[key]);
-  }
-
+  //language section read
   knownLanguage = fs.readFileSync("models/languageData", { encoding: "utf-8" });
 
   knownLanguage = JSON.parse(String(knownLanguage));
@@ -42,6 +45,7 @@ const getCV = (req, res) => {
     languageContainer.push(knownLanguage[key]);
   }
 
+  //work experience section  read
   experience = fs.readFileSync("models/experienceData", { encoding: "utf-8" });
 
   experience = JSON.parse(String(experience));
