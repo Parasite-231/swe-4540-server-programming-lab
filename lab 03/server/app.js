@@ -5,7 +5,10 @@ const router = require("./routers/router");
 
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "public")));
+
+//include illustrations
+app.use("/public/images/", express.static("./public/images"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
