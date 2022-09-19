@@ -15,7 +15,7 @@ const getCV = (req, res) => {
     edus.push(educations[key]);
   }
 
-  res.render("cv", { name: "Md Muktadir Mazumder", educations: edus });
+  res.render("cvLayout", { name: "Md Muktadir Mazumder", educations: edus });
 };
 
 module.exports = { getCV: getCV };
