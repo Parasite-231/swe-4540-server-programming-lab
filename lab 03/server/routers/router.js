@@ -5,6 +5,6 @@ const { getCV } = require("../controllers/cvController");
 
 const fs = require("fs");
 
-router.get("/", getCV);
+router.get("/my-cv", getCV);
 
 module.exports = router;
