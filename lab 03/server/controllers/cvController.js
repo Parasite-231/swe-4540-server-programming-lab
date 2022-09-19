@@ -42,11 +42,22 @@ const getCV = (req, res) => {
     languageContainer.push(knownLanguage[key]);
   }
 
+  experience = fs.readFileSync("models/experienceData", { encoding: "utf-8" });
+
+  experience = JSON.parse(String(experience));
+
+  experienceContainer = [];
+
+  for (let key in experience) {
+    experienceContainer.push(experience[key]);
+  }
+
   res.render("cvLayout", {
     name: "Md Muktadir Mazumder",
     educations: edus,
     skills: skillContainer,
     knownLanguage: languageContainer,
+    experience: experienceContainer,
   });
 };
 
