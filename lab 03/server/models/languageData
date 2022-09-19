@@ -1,0 +1,14 @@
+{
+  "1": {
+    "languageGenre": "English",
+    "level": "90%"
+  },
+  "2": {
+    "languageGenre": "Spanish",
+    "level": "80%"
+  },
+  "3": {
+    "languageGenre": "German",
+    "level": "75%"
+  }
+}

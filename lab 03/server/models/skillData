@@ -1,14 +1,18 @@
 {
   "1": {
-    "criteria": "Adobe Photoshop"
+    "criteria": "Adobe Photoshop",
+    "skillLevel": "90%"
   },
   "2": {
-    "criteria": "Photography"
+    "criteria": "Photography",
+    "skillLevel": "80%"
   },
   "3": {
-    "criteria": "Illustrator"
+    "criteria": "Illustrator",
+    "skillLevel": "75%"
   },
   "4": {
-    "criteria": "Media"
+    "criteria": "Media",
+    "skillLevel": "50%"
   }
 }
