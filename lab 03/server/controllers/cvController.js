@@ -1,4 +1,5 @@
 const fs = require("fs");
+const getSkills = require("./testa");
 
 const getCV = (req, res) => {
   educations = fs.readFileSync(
@@ -15,7 +16,11 @@ const getCV = (req, res) => {
     edus.push(educations[key]);
   }
 
-  res.render("cvLayout", { name: "Md Muktadir Mazumder", educations: edus });
+  res.render("cvLayout", {
+    name: "Md Muktadir Mazumder",
+    educations: edus,
+    skills: getSkills.getSkills.skillContainer,
+  });
 };
 
 module.exports = { getCV: getCV };
