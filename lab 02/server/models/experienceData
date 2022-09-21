@@ -4,20 +4,20 @@
     "workPlace": "javatpoint.com",
     "startingDate": "Jan 2019",
     "endingDate": "Current",
-    "workDescription": "I currently work here"
+    "workDescription": "Frontend developer at javatpoint"
   },
   "2": {
     "designation": "Web Developer",
     "workPlace": "kernel.com",
     "startingDate": "Mar 2017",
     "endingDate": "Dec 2020",
-    "workDescription": "I currently work here"
+    "workDescription": "Backend Developer at Kernel"
   },
   "3": {
-    "designation": "Graphic Designer",
+    "designation": "UI/UX Designer",
     "workPlace": "figma.com",
     "startingDate": "Jun 2020 ",
     "endingDate": "July 2020",
-    "workDescription": "I currently work here"
+    "workDescription": "First job as UI/UX designer"
   }
 }

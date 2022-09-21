@@ -13,17 +13,6 @@ const getCV = (req, res) => {
     edus.push(educations[key]);
   }
 
-  //skill section read
-  // skills = fs.readFileSync("models/skillData", { encoding: "utf-8" });
-
-  // skills = JSON.parse(String(skills));
-
-  // skillContainer = [];
-
-  // for (let key in skills) {
-  //   skillContainer.push(skills[key]);
-  // }
-
   skills = fs.readFileSync("models/skillData", { encoding: "utf-8" });
 
   skills = JSON.parse(String(skills));
@@ -57,7 +46,7 @@ const getCV = (req, res) => {
   }
 
   res.render("cvLayout", {
-    name: "Muktadir",
+    name: req.body.name,
     designation: req.body.designation,
     address: req.body.address,
     email: req.body.email,
