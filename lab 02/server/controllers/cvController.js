@@ -57,7 +57,11 @@ const getCV = (req, res) => {
   }
 
   res.render("cvLayout", {
-    name: "Md Muktadir Mazumder",
+    name: "Muktadir",
+    designation: req.body.designation,
+    address: req.body.address,
+    email: req.body.email,
+    mobile_number: req.body.mobile_number,
     educations: edus,
     skills: skillContainer,
     knownLanguage: languageContainer,

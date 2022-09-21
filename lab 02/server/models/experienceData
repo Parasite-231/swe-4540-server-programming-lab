@@ -3,18 +3,21 @@
     "designation": "Front End Developer",
     "workPlace": "javatpoint.com",
     "startingDate": "Jan 2019",
-    "endingDate": "Current"
+    "endingDate": "Current",
+    "workDescription": "I currently work here"
   },
   "2": {
     "designation": "Web Developer",
     "workPlace": "kernel.com",
     "startingDate": "Mar 2017",
-    "endingDate": "Dec 2020"
+    "endingDate": "Dec 2020",
+    "workDescription": "I currently work here"
   },
   "3": {
     "designation": "Graphic Designer",
     "workPlace": "figma.com",
     "startingDate": "Jun 2020 ",
-    "endingDate": "July 2020"
+    "endingDate": "July 2020",
+    "workDescription": "I currently work here"
   }
 }

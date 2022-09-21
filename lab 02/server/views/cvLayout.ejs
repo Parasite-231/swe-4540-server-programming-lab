@@ -15,7 +15,23 @@
               </div>
             </div>
             <div class="w3-container" style="margin-top: 5%">
-              <%- include('./partials/Introduction and contact section/personalInformation.ejs');%>
+            
+              <p>
+                <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><%=
+                designation %>
+              </p>
+              <p>
+                <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+                <%= address %>
+              </p>
+              <p>
+                <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><%=
+                email %>
+              </p>
+              <p>
+                <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><%=
+                mobile_number %>
+              </p>
               <hr />
 
               <%- include('./partials/skill section/skillInformation.ejs');%>
