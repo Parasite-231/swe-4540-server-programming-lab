@@ -1,20 +1,23 @@
+const { application } = require("express");
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
 
-  const express = require("express");
-  const mongoose = require("mongoose");
-  const bookList = require("./models/book");
-  const bodyParser = require('body-parser');
-  const BookList = new mongoose.model("BookList", bookList);
-  const routes = express.Router();
-    
-routes.use(express.json());
+const bookList = require("../models/book");
+const BookList = new mongoose.model("BookList", bookList);
+// const UserTasksModel = require("../../models/user models/user schema/userTasksSchema");
+
+const bookSectionRouter = express.Router();
+bookSectionRouter.use(express.json());
 
 
-  routes.get("/", async (req, res) => {
+
+bookSectionRouter.get("/booklists", async (req, res) => {
     const bookList = await BookList.find({});
     res.render("index", { bookList });
   });
 
-  routes.post("/", async (req, res) => {
+  bookSectionRouter.post("/add-booklists", async (req, res) => {
     //book object that will insert into database
     //new book object create
     //single document object insert way
@@ -35,10 +38,10 @@ routes.use(express.json());
         res.status(500).send("There was a server error in saving Book List");
         res.end();
       } else {
-        res.redirect("/");
+        res.redirect("/booklists");
        
       }
     });
   });
 
-  module.exports = {routes}
+module.exports = bookSectionRouter
