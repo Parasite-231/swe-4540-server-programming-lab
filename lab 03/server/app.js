@@ -8,9 +8,11 @@ const bookSectionRouter = require("./routers/bookSectionRouter");
 
 
 const app = express();
-const PORT = 3490;
+
 
 dotenv.config();
+SEVER_PORT = process.env.SEVER_PORT;
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
@@ -32,6 +34,6 @@ mongoose
 
 
 
-app.listen(PORT, () => {
-    console.log(`SERVER PORT RUNNING AT ${PORT}`);
+  app.listen(SEVER_PORT, () => {
+    console.log(`SERVER PORT RUNNING AT ${SEVER_PORT}`);
   });
