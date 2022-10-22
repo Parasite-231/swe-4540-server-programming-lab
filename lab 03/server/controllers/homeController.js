@@ -1,7 +1,7 @@
 const getHome = (req,res)=>{
 
 
-    res.send("Hello, this is home page ")
+    res.send("Hello, this is homepage ")
 }
 
 
