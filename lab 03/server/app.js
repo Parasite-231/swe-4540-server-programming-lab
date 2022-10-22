@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const path = require("path");
-const bookSectionRouter = require("./routers/bookSectionRouter");
-
+// const bookSectionRouter = require("./routers/bookSectionRouter");
+const router = require("./routers/routes");
 
 
 const app = express();
@@ -29,7 +29,8 @@ mongoose
 
  
 
-  app.use("/",bookSectionRouter)
+  // app.use("/",bookSectionRouter)
+  app.use(router)
 
 
 
