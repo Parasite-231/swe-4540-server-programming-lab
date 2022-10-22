@@ -1,0 +1,24 @@
+<%- include('../views/partials/common/cvProfileFormHeader.ejs'); %>
+
+<body>
+  <div class="contact-us">
+    <h1 style="text-align: center; margin: 5%">Profile From</h1>
+    <form method="post" action="/profile-form">
+      <input placeholder="Name" required="" type="text" name="name" />
+      <input
+        placeholder="Designation"
+        required=""
+        type="text"
+        name="designation"
+      />
+      <input placeholder="Address" type="text" name="address" />
+      <input placeholder="Email" type="email" name="email" />
+      <input
+        placeholder="Mobile Number"
+        required=""
+        type="text"
+        name="mobile_number"
+      /><button type="submit">Add</button>
+    </form>
+  </div>
+</body>
