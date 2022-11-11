@@ -40,7 +40,6 @@ var upload = multer({
 
 const postImage = async (req, res,next) => {
 
-// router.post("/uploadProfilePicture",function (req, res, next) {
 	
 	upload(req,res,function(err) {
 
@@ -51,7 +50,7 @@ const postImage = async (req, res,next) => {
 		}
 		else {
 
-			res.send("Success, Image uploaded!")
+			res.render("successUpload")
 		}
 	})
 

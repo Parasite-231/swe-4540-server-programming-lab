@@ -1,6 +1,6 @@
 // const express = require('express');
 // const bodyParser = require('body-parser');
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 // const mongoose = require("mongoose");
 // const multer = require('multer');
 // const path = require("path");
@@ -11,8 +11,8 @@
 // const app = express();
 
 
-// dotenv.config();
-// SEVER_PORT = process.env.SEVER_PORT;
+require("dotenv").config({ path: "./.env" });
+server_port = process.env.SEVER_PORT;
 
 
 //   app.listen(SEVER_PORT, () => {
@@ -32,15 +32,14 @@ app.use(express.static(path.join(__dirname, "uploads")));
 
 app.set("view engine","ejs")
 	
-// var upload = multer({ dest: "Upload_folder_name" })
-// If you do not want to use diskStorage then uncomment it
+
 	
 
 
 
 app.use(router)
 
-app.listen(8080,function(error) {
+app.listen(server_port,function(error) {
 	if(error) throw error
-		console.log("Server created Successfully on PORT 8080")
+		console.log(`SERVER PORT RUNNING AT ${server_port}`)
 })
